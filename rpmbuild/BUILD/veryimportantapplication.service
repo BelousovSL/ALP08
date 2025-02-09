@@ -1,0 +1,14 @@
+[Unit]
+  Description=VeryImportantApplication
+  After=network.target
+
+[Service]
+  WorkingDirectory=/opt/belousov/veryimportantapplication
+  ExecStart=/opt/belousov/veryimportantapplication/VeryImportantApplication
+  RemainAfterExit=true  
+
+  Restart=always
+  RestartSec=15
+
+[Install]
+  WantedBy = multi-user.target
